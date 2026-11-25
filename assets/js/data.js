@@ -52,6 +52,8 @@
      image        (string)  "assets/images/yourphoto.jpg" (optional). Drop the
                             file in assets/images/. If it's missing, the card
                             simply shows no image and nothing breaks.
+     ongoing      (boolean)  Optional. Shows the "Ongoing" tag on an entry that has an end date
+                            but is still running (end: "present" does it too).
      featured     (boolean) true stars the entry AND shows it as a tile in the
                             Highlights row at the top of the page. Keep it to
                             about 6: the row is only useful if it's selective.
@@ -107,15 +109,15 @@
 window.PORTFOLIO = {
 
   profile: {
-    name: "Imene AIT ABDELLAH",
+    name: "Imene Ait Abdellah",
     initials: "iaa",
     photo: "assets/images/profile.jpg",   // add your square photo here; until then the initials show
-    role: "Master 2 and Graduate Program (IA2S) at University Paris-Est  · Forward Deployed AI Intern at Dupont",
-    role_fr: "Étudiante en Master 2 et Programme de Graduate (IA2S) à l'Université Paris-Est  · Stage IA Forward Deployed chez Dupont",
-    tagline: "Research on responsible generative AI and on putting AI systems, agentic ones in particular, into industrial use.",
-    tagline_fr: "Recherche sur l'IA générative responsable et sur l'intégration industrielle des systèmes d'IA, notamment agentiques.",
-    summary: "Looking for a 6-month AI internship (Feb. 2027)",
-    summary_fr: "A la recherche d'un stage IA de 6 mois (fév. 2027)",
+    role: "Master 2 and Graduate Program (IA2S) student at University Paris-Est · Graduate engineer in AI and Data Science from ENSIA",
+    role_fr: "Étudiante en Master 2 et Programme de Graduate (IA2S) à l'Université Paris-Est · Diplômée ingénieure en IA et science des données de l'ENSIA",
+    tagline: "Research in trustworthy generative AI. Industry experience, through the industrial integration of AI systems, agentic ones in particular.",
+    tagline_fr: "Recherche en IA générative de confiance. Expérience en industrie, par l'intégration industrielle des systèmes d'IA, notamment agentiques.",
+    summary: "Open to any 4 to 6-month internship offer in applied AI in industry from February 2027",
+    summary_fr: "Ouverte à toute proposition de stage de 4 à 6 mois en IA appliquée en industrie à partir de février 2027",
     position: "AI engineer · research & industry",
     position_fr: "Ingénieure IA · recherche & industrie",
     location: "Paris, France",
@@ -123,7 +125,7 @@ window.PORTFOLIO = {
     pageTitle_fr: "Imene Ait Abdellah · Ingénieure IA, Master 2 et Programme de Graduate (IA2S) à l'Université Paris-Est",
     pageDescription: "AI engineer (ENSIA, first cohort) and Master 2 and Graduate Program (IA2S) student at University Paris-Est, working on deepfake detection, RAG in production and agentic AI. Looking for a 6-month internship from February 2027.",
     pageDescription_fr: "Ingénieure IA (ENSIA, première promotion) et étudiante en Master 2 et Programme de Graduate (IA2S) à l'Université Paris-Est : détection de deepfakes, RAG en production et IA agentique. Recherche un stage de 6 mois à partir de février 2027.",
-    updated: "2026-11-22",
+    updated: "2026-11-23",
     email: "theimeneart@gmail.com",
     phone: "+33 7 59 80 38 26",
     github: "https://github.com/imeneait",
@@ -131,11 +133,10 @@ window.PORTFOLIO = {
     cv: "assets/CV_AIT_ABDELLAH_Imene_2027.pdf",
     stats: [
       { value: "6th / 731,723", value_fr: "6e / 731 723", label: "National rank, Baccalauréat in Mathematics (19.18/20)", label_fr: "Rang national, baccalauréat en mathématiques (19,18/20)" },
-      { value: "17.37/20", value_fr: "17,37/20", label: "ENSIA engineering degree, first cohort, with honours", label_fr: "Diplôme d'ingénieur ENSIA, première promotion, avec mention" },
-      { value: "0.963", value_fr: "0,963", label: "AUC on FF++ for a 1.2M-parameter innovative deepfake detector", label_fr: "AUC sur FF++ pour un détecteur de deepfakes innovant de 1,2 M de paramètres" },
-      { value: "300+", label: "Pilot users of the RAG-based Chatobot deployed at Huawei Cloud", label_fr: "Utilisateurs pilotes du chatbot RAG déployé chez Huawei Cloud" },
-      { value: "0.3 s", value_fr: "0,3 s", label: "Retrieval latency of the multi-step FAISS pipeline", label_fr: "Latence de recherche du pipeline FAISS multi-étapes" },
-      { value: "4", label: "Languages: Kabyle, Arabic, English, French, Turkish, Spanish", label_fr: "Langues : kabyle, arabe, anglais, français, turc, espagnol" }
+      { value: "1st cohort", value_fr: "1re promotion", label: "École Nationale Supérieure d'Intelligence Artificielle (ENSIA): top 10% of the class, then defence average 17.37/20", label_fr: "École Nationale Supérieure d'Intelligence Artificielle (ENSIA) : top 10 % de la classe, puis moyenne de soutenance de 17,37/20" },
+      { value: "1 year", value_fr: "1 an", label: "International research experience through the Mitacs Globalink Research Award, with Calcul Québec funding", label_fr: "Expérience internationale en recherche grâce au Mitacs Globalink Research Award, avec le financement de Calcul Québec" },
+      { value: "1+ year", value_fr: "+1 an", label: "National and international experience in the forward deployment of AI solutions, in line with business needs", label_fr: "Expérience nationale et internationale en déploiement avancé (forward deployment) de solutions d'IA, dans le respect de la demande métier" },
+      { value: "ICT Day", label: "Pitched the Huawei and ENSIA RAG-based chatbot to stakeholders (the minister) as an innovative solution for Algeria's higher-education system", label_fr: "Pitch du chatbot RAG de Huawei et de l'ENSIA devant les parties prenantes (le ministre) comme solution innovante pour l'enseignement supérieur algérien" }
     ]
   },
 
@@ -274,7 +275,7 @@ window.PORTFOLIO = {
       title: "Agentic AI Intern, private-security workflow automation",
       title_fr: "Stagiaire IA agentique, automatisation des workflows de sécurité privée",
       org: "Dupont Tech", location: "Île-de-France, France",
-      start: "2026-11", end: "2027-01",
+      start: "2026-11", end: "2027-01", ongoing: true,
       kind: "experience", importance: 5, featured: true,
       categories: ["technical"],
       summary: "AI agents connected to Comète (AEXAE) to automate quote production, scheduling and field-agent follow-up.",
@@ -538,7 +539,17 @@ window.PORTFOLIO = {
     group_fr: "Langues",
     link: false,
     items: ["Kabyle", "Arabic", "English", "French"],
-    items_fr: ["Kabyle", "Arabe", "Anglais", "Français"]
+    items_fr: ["Kabyle", "Arabe", "Anglais", "Français"],
+    /* One visual per language, in the same order as `items`: the language
+       written in its own script (native), the script's name (script /
+       script_fr), a few of its letters, and its language tag (lang) and
+       direction (dir) so the browser picks the right font and order. */
+    scripts: [
+      { native: "ⵜⴰⵇⴱⴰⵢⵍⵉⵜ", lang: "kab-Tfng", dir: "ltr" },
+      { native: "العربية", lang: "ar", dir: "rtl" },
+      { native: "English", lang: "en", dir: "ltr"},
+      { native: "Français", lang: "fr", dir: "ltr"}
+    ]
   }
 ]
 };

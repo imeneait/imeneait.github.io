@@ -26,14 +26,15 @@
       card_photo_alt: function (name) { return "Portrait of " + name; },
       nav_motivation: "Motivation", mo_h: "Motivation",
       mo_sub: "Trustworthy AI, AI safety and reliable agentic systems: what I work on and where I'm heading.",
-      mo1_h: "What I do", mo1_p: "I'm interested in trustworthy AI and AI safety. My first research ground is spatio-temporal and frequency analysis for video deepfake detection.",
-      mo2_h: "What I want", mo2_l1: "Next step", mo2_p1: "A 6-month internship (from February 2027) in a large industrial R&D group, around trustworthy AI, AI safety and reliable agentic AI systems.",
-      mo2_l2: "Long term", mo2_p2: "Continue towards an industrial PhD (CIFRE), then work in R&D.",
+      mo1_h: "What I do", mo1_p: "I'm interested in trustworthy AI and AI safety, with a first research ground: spatio-temporal and frequency analysis for video deepfake detection. A direction I back with a personal research project: detecting deception in the chain of thought of multi-step AI agents.",
+      mo2_h: "What I want", mo2_l1: "Next step towards my goal", mo2_p1: "A 6-month internship (from February 2027) in a large industrial R&D group, around trustworthy AI, AI safety and reliable agentic AI systems.",
       mo3_h: "What I built in Algeria", mo3_p: "As part of the first cohort of the École Nationale Supérieure d'Intelligence Artificielle, five years of intensive training gave me solid foundations in machine learning, deep learning, computer vision, NLP, optimisation, AI systems and research.",
-      mo4_h: "Today: Master 2 IA2S · UPEC", mo4_p: "I'm broadening my profile towards Knowledge Representation & Automated Reasoning, and the engineering and deployment of AI systems, agentic ones in particular. The programme combines data-driven AI and knowledge-driven AI.",
+      mo4_h: "Why I'm in France", mo4_p: "I'm broadening my profile towards Knowledge Representation & Automated Reasoning, and the engineering and deployment of AI systems, through the Master 2 IA2S at Université Paris-Est. The programme combines data-driven AI and knowledge-driven AI.",
+      mo5_h: "My goal", mo5_p: "Combining research with the production of reliable systems that respect the needs of the business. My ambition is to launch myself into industrial R&D.",
       mo_d1: "2021 to 2026", mo_d2: "Since 2025", mo_d3: "Sep. 2026", mo_d4: "From Feb. 2027", mo_d5: "Then", mo_now: "Now",
-      mo_flow: "My path, in chronological order",
+      mo_flow: "My path",
       nav_journey: "Trajectory", jr_h: "Trajectory", jr_sub: "From Algiers to Paris, and what I'm aiming for.",
+      nav_languages: "Languages", lg_h: "Languages", lg_sub: "Four languages, four ways of writing.",
       jr1_l: "Algiers", jr1_p: "Engineer degree from ENSIA in Algeria, in the school's first cohort.",
       jr2_l: "Canada", jr2_p: "Research in trustworthy generative AI.",
       jr3_l: "Paris", jr3_p: "Preparing a second master's in AI at Université Paris-Est. I chose Europe to launch myself into R&D in European industry.",
@@ -98,14 +99,15 @@
       card_photo_alt: function (name) { return "Portrait " + (/^[aeiouyàâéèêîôh]/i.test(name) ? "d'" : "de ") + name; },
       nav_motivation: "Motivation", mo_h: "Motivation",
       mo_sub: "IA de confiance, sécurité de l'IA et systèmes agentiques fiables : ce sur quoi je travaille et où je vais.",
-      mo1_h: "Ce que je fais", mo1_p: "Je m'intéresse à l'IA de confiance et à la sécurité de l'IA, avec un premier terrain de recherche : l'analyse spatio-temporelle et fréquentielle pour la détection de deepfakes vidéo.",
-      mo2_h: "Ce que je veux", mo2_l1: "Prochaine étape", mo2_p1: "Un stage de 6 mois (à partir de février 2027) dans un grand groupe de R&D industrielle, autour de l'IA de confiance, de l'AI Safety et de systèmes d'IA agentique fiables.",
-      mo2_l2: "Long terme", mo2_p2: "Poursuivre vers un doctorat industriel (CIFRE), puis travailler en R&D.",
+      mo1_h: "Ce que je fais", mo1_p: "Je m'intéresse à l'IA de confiance et à la sécurité de l'IA, avec un premier terrain de recherche : l'analyse spatio-temporelle et fréquentielle pour la détection de deepfakes vidéo. Une direction que je soutiens avec un projet de recherche personnel : détecter la tromperie dans la chaîne de raisonnement d'un agent IA multi-étapes.",
+      mo2_h: "Ce que je veux", mo2_l1: "Prochaine étape vers mon but", mo2_p1: "Un stage de 6 mois (à partir de février 2027) dans un grand groupe de R&D industrielle, autour de l'IA de confiance, de l'AI Safety et de systèmes d'IA agentique fiables.",
       mo3_h: "Ce que j'ai construit en Algérie", mo3_p: "Issue de la 1re promotion de l'École Nationale Supérieure d'Intelligence Artificielle, cinq années de formation intensive m'ont donné des bases solides en machine learning, deep learning, vision par ordinateur, NLP, optimisation, systèmes d'IA et recherche.",
-      mo4_h: "Aujourd'hui : Master 2 IA2S · UPEC", mo4_p: "J'y élargis mon profil vers la représentation des connaissances et le raisonnement automatique, ainsi que l'ingénierie et le déploiement de systèmes d'IA, notamment agentique. Le programme associe IA orientée données et IA orientée connaissances.",
+      mo4_h: "Pourquoi je suis en France", mo4_p: "J'y élargis mon profil vers la représentation des connaissances et le raisonnement automatique, ainsi que l'ingénierie et le déploiement de systèmes d'IA, via le Master 2 IA2S à l'Université Paris-Est. Le programme associe IA orientée données et IA orientée connaissances.",
+      mo5_h: "Imene dans 5 ans ?", mo5_p: "Allier la recherche à la production. Mon objectif de carriere est de me propulser dans la R&D industrielle.",
       mo_d1: "2021 à 2026", mo_d2: "Depuis 2025", mo_d3: "Sept. 2026", mo_d4: "Dès fév. 2027", mo_d5: "Ensuite", mo_now: "Maintenant",
-      mo_flow: "Mon parcours, dans l'ordre chronologique",
+      mo_flow: "Mon parcours",
       nav_journey: "Trajectoire", jr_h: "Trajectoire", jr_sub: "D'Alger à Paris, et ce que je vise.",
+      nav_languages: "Langues", lg_h: "Langues", lg_sub: "Quatre langues, quatre façons de les écrire.",
       jr1_l: "Alger", jr1_p: "Diplôme d'ingénieure à l'ENSIA en Algérie, dans la première promotion de l'école.",
       jr2_l: "Canada", jr2_p: "Recherche en IA générative de confiance.",
       jr3_l: "Paris", jr3_p: "Je prépare un second master en IA à l'Université Paris-Est. J'ai choisi l'Europe pour me propulser en R&D dans l'industrie européenne.",
@@ -432,7 +434,7 @@
     closeMenu();
     applyStaticStrings();
     [$("#hero-cta"), $("#hero-stats"), $("#player-card"), $("#footer-links"), $("#filters"), $("#timeline-list"),
-     $("#highlights-grid"), $("#map-inner"), $("#skills-grid")].forEach(empty);
+     $("#highlights-grid"), $("#map-inner"), $("#skills-grid"), $("#languages-grid")].forEach(empty);
     records = [];
     groupEls = [];
     ordered = [];
@@ -656,7 +658,7 @@
   }
   function renderCard() {
     var card = $("#player-card");
-    if (!card) return;
+    if (!card) { revealStats(0); return; }   // the rating card was removed from the page
     empty(card);
     var p = DATA.profile || {};
     var rated = (DATA.skills || []).filter(function (g) { return ratingOf(g) !== null; });
@@ -943,13 +945,16 @@
     return norm(parts.join(" "));
   }
 
+  /* an entry is "ongoing" when it runs to the present, or is flagged `ongoing` in data.js */
+  function isOngoing(it) { return it.end === "present" || it.ongoing === true; }
+
   /* Three levels per card: 0 compact (dates, title, organisation), 1 preview
      (summary, tags, the first bullets), 2 full (everything). The preview also
      shows, laid over the cards below, while a mouse rests on a compact card
      or the keyboard focuses its "More" button (see initPeek). */
   function buildCard(it, rec) {
     var color = catColor((it.categories || [])[0]);
-    var ongoing = it.end === "present";
+    var ongoing = isOngoing(it);
 
     var loc = tf(it, "location");
     var summary = tf(it, "summary");
@@ -1120,7 +1125,7 @@
       var it = o.it;
       var rec = {
         it: it, id: ENTRY_IDS[o.idx], el: null,
-        cats: it.categories || [], featured: !!it.featured, present: it.end === "present",
+        cats: it.categories || [], featured: !!it.featured, present: isOngoing(it),
         text: searchText(it),        // current language: what the search box matches
         textAll: FULLTEXT[o.idx],    // both languages: what skill links match
         details: null, toggle: null, full: null, level: 0,
@@ -2444,6 +2449,28 @@
     });
   }
 
+  /* Languages: one card per language of the "Languages" group in data.js,
+     showing the language written in its own script (Tifinagh for Kabyle,
+     Arabic script for Arabic, Latin for English and French) and a few letters.
+     The glyphs are decorative (aria-hidden); the name and the script's name
+     are real text. */
+  function renderLanguages() {
+    var grid = $("#languages-grid");
+    if (!grid) return;
+    empty(grid);   // drops the static copy from index.html
+    var g = (DATA.skills || []).filter(function (x) { return x.scripts; })[0];
+    if (!g) return;
+    var names = tf(g, "items") || [];
+    g.scripts.forEach(function (s, i) {
+      var dir = s.dir || "ltr";
+      grid.appendChild(h("li", { class: "lang-card", style: "--i:" + i },
+        h("span", { class: "lang-glyph", lang: s.lang, dir: dir, "aria-hidden": "true" }, s.native),
+        h("span", { class: "lang-name" }, names[i] || ""),
+        h("span", { class: "lang-script" }, tf(s, "script")),
+        h("span", { class: "lang-letters", lang: s.lang, dir: dir, "aria-hidden": "true" }, s.letters)));
+    });
+  }
+
   /* ------------------------------- TERMINAL ------------------------------- */
   /* A small shell over the page, for the curious (index.html #term), opened
      from the footer's ">_ Terminal" button or the ` key. Its commands read
@@ -2704,9 +2731,9 @@
     renderCard();
     renderFilters();
     renderTimeline();
-    renderHighlights();   // these two read the records renderTimeline builds
-    renderMap();
+    renderMap();          // reads the records renderTimeline builds
     renderSkills();
+    renderLanguages();
   }
 
   initTheme();

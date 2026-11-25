@@ -292,8 +292,8 @@ html.vt-theme::view-transition-new(root) { animation: theme-reveal .62s cubic-be
 /* Hero rover: the canvas assets/js/rover.js draws on, behind everything in the hero */
 .hero-fx { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; pointer-events: none; }
 .hero-inner {
-  display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
-  grid-template-areas: "text visual" "stats stats";
+  display: grid; grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "text" "stats";
   gap: clamp(1.5rem, 3.5vw, 2.75rem) clamp(1.5rem, 4vw, 3.5rem); align-items: center;
 }
 .hero-text { grid-area: text; }
@@ -333,8 +333,11 @@ html.vt-theme::view-transition-new(root) { animation: theme-reveal .62s cubic-be
 /* key figures: a spec-sheet band (hairline over each figure), not boxed cards */
 .hero-stats {
   list-style: none; margin: 0; padding: 0;
-  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem 1.5rem;
+  display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1.1rem 1.5rem;
 }
+/* five figures: three on the first row, two wider ones on the second */
+.hero-stats li { grid-column: span 2; }
+.hero-stats li:nth-child(n+4) { grid-column: span 3; }
 .hero-stats li { border-top: 1px solid var(--border-strong); padding-top: .7rem; min-width: 0; }
 .hero-stats .stat-value {
   display: block; font-family: var(--font-title); font-size: var(--fs-lead); font-weight: 700;
@@ -1617,7 +1620,7 @@ body::before {
   .header-actions { margin-left: auto; gap: .4rem; }
 }
 @media (max-width: 860px) {
-  .hero-inner { grid-template-columns: minmax(0, 1fr); grid-template-areas: "text" "visual" "stats"; }
+  .hero-inner { grid-template-columns: minmax(0, 1fr); grid-template-areas: "text" "stats"; }
   .view-list .tl-head { grid-template-columns: 10.5rem minmax(0, 1fr); }
 }
 @media (max-width: 720px) {
@@ -1639,6 +1642,8 @@ body::before {
   .hero-inner { row-gap: 1.5rem; }
   .hero-summary { margin-bottom: 1.1rem; }
   .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .9rem 1rem; }
+  .hero-stats li, .hero-stats li:nth-child(n+4) { grid-column: auto; }
+  .hero-stats li:last-child { grid-column: 1 / -1; }
   .pcard { --cut: 14px; max-width: none; padding: 1rem 1rem .9rem; }
   .pcard::after { --cut: 13.4px; }
   .pcard-top { gap: .75rem; padding-bottom: .75rem; }
@@ -1851,9 +1856,6 @@ html[data-theme="dark"].splash-on .splash {
   background: linear-gradient(135deg, var(--accent), #9333ea); box-shadow: 0 0 0 5px var(--bg), var(--shadow-md);
 }
 .mo-node.is-future .mo-dot { background: var(--surface); color: var(--accent); border: 2.5px dashed var(--accent); }
-.mo-node.is-now .mo-dot::before {
-  content: ""; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid var(--accent); animation: mo-ping 2s ease-out infinite;
-}
 .mo-card {
   grid-row: 1; position: relative;
   background: color-mix(in srgb, var(--surface) 90%, transparent);
@@ -1878,7 +1880,6 @@ html[data-theme="dark"].splash-on .splash {
 .mo-now { margin-left: .4rem; padding: .1rem .55rem; border-radius: 999px; font-size: var(--fs-micro); font-weight: 700; background: var(--accent); color: var(--accent-ink); }
 .mo-card h3 { font-size: var(--fs-title); margin: 0 0 .4rem; }
 .mo-card p { margin: 0; color: var(--text); }
-@keyframes mo-ping { from { opacity: .9; transform: scale(1); } to { opacity: 0; transform: scale(1.55); } }
 .mo-flow.fx .mo-node { opacity: 0; transform: translateY(16px); transition: opacity .5s var(--ease), transform .5s var(--ease-out); }
 .mo-flow.fx .mo-node.is-in { opacity: 1; transform: none; }
 @media (max-width: 720px) {
@@ -1892,7 +1893,6 @@ html[data-theme="dark"].splash-on .splash {
 }
 @media (prefers-reduced-motion: reduce) {
   .mo-card { transition: none; } .mo-node:hover .mo-card { transform: none; }
-  .mo-node.is-now .mo-dot::before { animation: none; }
 }
 
 /* ------------------------------- Trajectory ------------------------------- */
@@ -1951,3 +1951,64 @@ html[data-theme="dark"].splash-on .splash {
   .jr-bar, .jr-star { animation: none; }
   .jr-card, .jr-node { transition: none; }
 }
+
+/* ------------------------------- Languages -------------------------------- */
+/* one card per language, written in its own script. Tifinagh and Arabic rely on
+   system fonts (Noto Sans Tifinagh / Ebrima, Noto Sans Arabic / Segoe UI / Geeza
+   Pro); the stacks below only list fonts that carry those scripts. */
+.languages-section { padding: clamp(2rem, 5vw, 3.5rem) 0; border-top: 1px solid var(--border); }
+.lang-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; }
+.lang-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: .15rem;
+  padding: .65rem .6rem .55rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius);
+  font-size: .85rem;
+  overflow: hidden;
+}
+
+.lang-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+}
+
+.lang-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-lift);
+}
+
+.lang-glyph {
+  display: block;
+  max-width: 100%;
+  margin: .15rem 0 .1rem;
+  line-height: 1.15;
+  color: var(--accent);
+  font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+.lang-glyph[lang="kab-Tfng"], .lang-letters[lang="kab-Tfng"] {
+  font-family: "Noto Sans Tifinagh", "Ebrima", "Segoe UI Historic", "Noto Sans", sans-serif; font-weight: 400;
+}
+.lang-glyph[lang="ar"], .lang-letters[lang="ar"] {
+  font-family: "Noto Sans Arabic", "Segoe UI", "Geeza Pro", "Tahoma", "Arial", sans-serif;
+}
+.lang-name { font-family: var(--font-title); font-weight: 700; font-size: var(--fs-title); color: var(--text); }
+.lang-script { font-size: var(--fs-meta); text-transform: uppercase; letter-spacing: .08em; color: var(--text-muted); }
+.lang-letters {
+  display: block; margin-top: .55rem; padding-top: .6rem; width: 100%; border-top: 1px dashed var(--border-strong);
+  font-size: 1.15rem; letter-spacing: .12em; color: var(--text-muted);
+}
+@media (prefers-reduced-motion: reduce) { .lang-card { transition: none; } .lang-card:hover { transform: none; } }
