@@ -1,13 +1,12 @@
 # Accessibility
 
-This site should work for everyone who visits it, whether they use a mouse, a
-keyboard, a screen reader, a phone or a zoomed-in screen. The target is the
+This site should work for everyone who visits it, whether they use a screen reader, a phone or a zoomed-in screen. The target is the
 [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/)
 at level AA.
 
 ## What the site does
 
-- **Keyboard.** Everything that works with a mouse also works with the keyboard.
+- **Keyboard.** 
   A "Skip to timeline" link comes first, and focus is always visible. `/` jumps
   to the search box and `Escape` closes the open preview, then the menu.
 - **Previews on hover.** The preview that opens over a timeline entry also opens
@@ -58,8 +57,8 @@ If something gets in your way, please say so:
 - open an issue with the
   [Report a problem](https://github.com/imeneait/imeneait.github.io/issues/new?template=report-a-problem.yml)
   form and choose "Accessibility barrier", or
-- write to theimeneart@gmail.com if you'd rather not use GitHub.
+- write to theimeneart@gmail.com .
 
 Saying which page, browser and assistive technology you were using helps.
 
-_Last reviewed: 22 November 2026._
+_Last reviewed: 26 November 2026._
